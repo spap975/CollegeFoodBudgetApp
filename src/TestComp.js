@@ -1,4 +1,5 @@
 import "./TestComp.css";
+import React, { Componenet } from "react";
 
 function TestComp() {
   return (
