@@ -11,7 +11,7 @@ function TestComp() {
 
   return (
     
-    <div class="d-inline-flex p-2">
+    <div class="d-inline-flex p-2" style={{ backgroundImage: "url(/leafBackground.jpeg)" }}>
       
     <form>
       <h1> Budgeting App </h1>
