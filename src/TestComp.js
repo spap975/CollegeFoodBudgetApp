@@ -5,9 +5,9 @@ function TestComp() {
 
   const inputRef = useRef("");
 
-  useEffect(() => {
-    console.log(inputRef);
-  },[inputRef]);
+  const handleSubmit = () => {
+    
+  }
 
   return (
     
@@ -43,17 +43,12 @@ function TestComp() {
 
             <br></br>
             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></input>
-            <label class="form-check-label" for="Kosher"> Kosher
-            </label>
-
-            <br></br>
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></input>
             <label class="form-check-label" for="PeanutAllergy"> Peanut Allergy
             </label>
         </div>
 
         <br></br>
-        <button type="submit" className="btn btn-primary btn-block">Submit</button>
+        <button type="submit" className="btn btn-primary btn-block" onClick={handleSubmit}>Submit</button>
 
     </form>
     </div>
