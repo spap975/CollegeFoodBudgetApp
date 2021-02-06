@@ -7,6 +7,7 @@ function TestComp() {
     <div class="d-inline-flex p-2">
       
     <form>
+      <h1> Budgeting App </h1>
     <div className="form-group">
             <label>Budget Per Week</label>
             <input name="email" type="email" className="form-control" placeholder="$" />
