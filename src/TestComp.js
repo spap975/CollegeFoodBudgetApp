@@ -5,7 +5,7 @@ function TestComp() {
     <div>
     <p className="title">BUDGET APP</p>
     <form>
-      <label for="FORM-BUDGET">Budget (per week)</label>
+      <p className= "Budget-title">Budget (per week)</p>
       <input type="text" id="budget" name="fname"></input>
     </form>
     </div>
