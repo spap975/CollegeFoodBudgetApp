@@ -1,13 +1,20 @@
 import "./TestComp.css";
-import React, { Componenet } from "react";
+import React, { useRef, useEffect, useState, Componenet } from "react";
 
 function TestComp() {
+
+  const inputRef = useRef("");
+
+  useEffect(() => {
+    console.log(inputRef);
+  },[inputRef]);
+
   return (
     <div class="d-inline-flex p-2">
     <form>
     <div className="form-group">
             <label>Budget Per Week</label>
-            <input name="email" type="email" className="form-control" placeholder="$" />
+            <input name="email" type="email" className="form-control" placeholder="$" ref={inputRef} />
        </div>
 
         <div className="form-check" >
