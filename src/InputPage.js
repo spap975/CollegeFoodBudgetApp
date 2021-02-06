@@ -1,7 +1,7 @@
-import "./TestComp.css";
+import "./InputPage.css";
 import React, { useRef, useEffect, useState, Componenet } from "react";
 
-function TestComp() {
+function InputPage() {
 
   const inputRef = useRef("");
 
@@ -11,7 +11,7 @@ function TestComp() {
 
   return (
     
-    <div class="d-inline-flex p-2" style={{ backgroundImage: "url(/leafBackground.jpeg)" }}>
+    <div class="d-inline-flex p-2" className="InputContainer" style={{ backgroundImage: "url(/leafBackground.jpeg)" }}>
       
     <form>
       <h1> Budgeting App </h1>
@@ -56,4 +56,4 @@ function TestComp() {
   );
 }
 
-export default TestComp;
+export default InputPage;
