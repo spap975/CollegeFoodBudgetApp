@@ -1,5 +1,6 @@
 import "./InputPage.css";
 import React, { useRef, useEffect, useState, Componenet } from "react";
+import axios from "axios";
 
 function InputPage() {
 
@@ -7,6 +8,26 @@ function InputPage() {
 
   const handleSubmit = () => {
     
+
+    var options = {
+      method: 'GET',
+      url: 'https://api.spoonacular.com/recipes/complexSearch',
+      params: {
+        apiKey: "68028abd508948df9ad533955628fc4f",
+        diet: 'vegetarian',
+        excludeIngredients: 'coconut',
+        intolerances: 'egg, gluten',
+        number: '10',
+      },
+      
+    };
+    
+    axios.request(options).then(function (response) {
+      console.log(response.data);
+    }).catch(function (error) {
+      console.error(error);
+    });
+
   }
 
   return (
