@@ -22,7 +22,7 @@ function TestComp() {
       <input type="checkbox" id="PeanutAllergy" name="PeanutAllergy" value="PeanutAllergy"></input>
       <label for="PeanutAllergy"> Peanut Allergy</label>
 
-      <input type="submit" value="Submit">
+      <input type="submit" value="Submit"></input>
 
     </form>
     </div>
