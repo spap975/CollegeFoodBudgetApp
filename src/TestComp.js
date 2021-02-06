@@ -3,9 +3,27 @@ import React, { Componenet } from "react";
 
 function TestComp() {
   return (
-    <div>
-    <p className="title">BUDGET APP</p>
+    <div class="d-inline-flex p-2">
+    
     <form>
+
+    <div className="form-group" >
+            <label>Budget Per Week</label>
+            <input name="email" type="email" className="form-control" placeholder="$" />
+        </div>
+
+        <div className="form-check" >
+            <label>Dietary Restrictions</label>
+            <label class="form-check-label" for="flexCheckDefault">
+              Default checkbox
+            </label>
+        </div>
+
+
+        <br></br>
+        <button type="submit" className="btn btn-primary btn-block">Submit</button>
+
+
       <p className= "Budget-title">Budget (per week)</p>
       <input type="text" id="budget" name="fname"></input>
       <p className= "DietaryRestrictions">Dietary Restrictions</p>
