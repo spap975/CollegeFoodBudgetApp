@@ -41,7 +41,7 @@ function InputPage() {
       <h1 className="important"> $crunch </h1>
     <div className="form">
             <label className="Budget">Budget Per Week</label>
-            <input name="email" type="email" className="form-control" placeholder="$" ref={inputRef} />
+            <input name="number" type="number" className="form-control" placeholder="$" ref={inputRef} />
        </div>
         <div className="form">
             <label>Dietary Restrictions</label>
