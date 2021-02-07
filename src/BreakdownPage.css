@@ -1,0 +1,27 @@
+h1{
+  color:#274c77;
+  height: 30%;
+  width: 100%;
+  padding: 10px;
+  /*background-image: url('CRUNCH.png');*/
+  font-weight: bolder;
+}
+
+
+
+.right{
+  background-color: #274c77;
+  width: 50%;
+  text-align: center;
+}
+
+.left{
+  background-color: #6096ba;
+  width: 50%;
+  text-align: center;
+
+}
+
+.back{
+  color: #e7ecef;
+}

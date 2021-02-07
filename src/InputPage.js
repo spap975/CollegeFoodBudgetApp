@@ -38,8 +38,8 @@ function InputPage() {
     <div class="d-inline-flex p-2" className="InputContainer" style={{ backgroundImage: "url(/leafBackground.jpeg)" }}>
 
     <form>
-      <h1> $crunch </h1>
-    <div className="form-group">
+      <h1 className="important"> $crunch </h1>
+    <div className="form">
             <label className="Budget">Budget Per Week</label>
             <input name="email" type="email" className="form-control" placeholder="$" ref={inputRef} />
        </div>
