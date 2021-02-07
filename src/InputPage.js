@@ -7,7 +7,7 @@ function InputPage() {
   const inputRef = useRef("");
 
   const handleSubmit = () => {
-    
+
 
     var options = {
       method: 'GET',
@@ -19,9 +19,9 @@ function InputPage() {
         intolerances: 'egg, gluten',
         number: '10',
       },
-      
+
     };
-    
+
     axios.request(options).then(function (response) {
       console.log(response.data);
     }).catch(function (error) {
@@ -31,16 +31,18 @@ function InputPage() {
   }
 
   return (
-    
+
+    <div className="background">
+
     <div class="d-inline-flex p-2" className="InputContainer" style={{ backgroundImage: "url(/leafBackground.jpeg)" }}>
-      
+
     <form>
       <h1> Budgeting App </h1>
     <div className="form-group">
-            <label>Budget Per Week</label>
+            <label className="Budget">Budget Per Week</label>
             <input name="email" type="email" className="form-control" placeholder="$" ref={inputRef} />
        </div>
-        <div className="form-check" >
+        <div className="form">
             <label>Dietary Restrictions</label>
             <br></br>
             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></input>
@@ -73,7 +75,7 @@ function InputPage() {
 
     </form>
     </div>
-    
+    </div>
   );
 }
 

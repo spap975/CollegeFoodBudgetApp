@@ -1,16 +1,33 @@
-.title {
-    font-size: 100px;
+h1{
+  font-size: 80px;
+  font-weight: bold;
+  color: #e7ecef;
 }
 
-.Budget-title{
-  font-size: 40px;
+.Budget{
+  color: #e7ecef;
+}
+.form{
+  color: #e7ecef;
+}
+.title{
+  font-weight: bold;
 }
 
 .InputContainer {
   margin: 0 auto;
-  width: 350px;
+  position: absolute;
+  width: 40%;
+  padding: 5px;
+  top: 25%;
+  left: 33%;
   text-align: center;
-  margin-top: 100px;
-  background-color: #88E892;
+  background-color: #274c77;
   box-shadow: 0px 0px 6px 3px rgba(0,0,0,.2);
+}
+
+.background{
+  height: 100vh;
+  width: 100vw;
+  background-image: url('CRUNCH.png');
 }
