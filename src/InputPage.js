@@ -29,16 +29,6 @@ function InputPage() {
     //   console.error(error);
     // });
 
-    axios.get("https://spoonacular.com/Sun-dried-Tomato--amp--Artichoke-Tuna-Casserole-662287")
-      .then((res) => {
-        var dom = parser.parseFromString(res.data);
-
-        var ingr = dom.getElementsByClassName('spoonacular-ingredient');
-
-        ingr.forEach((i) => console.log(i.childNodes[3].childNodes[0].text))
-
-      });
-
   }
 
   return (
