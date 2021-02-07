@@ -13,15 +13,24 @@ h1{
   background-color: #274c77;
   width: 50%;
   text-align: center;
+  height: 100vh;
+  overflow-y: auto;
 }
 
 .left{
   background-color: #6096ba;
   width: 50%;
   text-align: center;
-
+  height: 100vh;
+  overflow-y: auto;
 }
 
 .back{
   color: #e7ecef;
+}
+
+.ingredient {
+    width:100%;
+    height: fit-content;
+    display: block;
 }
