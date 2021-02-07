@@ -1,6 +1,7 @@
 import "./InputPage.css";
 import React, { useRef, useEffect, useState, Componenet } from "react";
 import axios from "axios";
+import DomParser from "dom-parser";
 
 function InputPage() {
 
@@ -8,25 +9,35 @@ function InputPage() {
 
   const handleSubmit = () => {
     
-
-    var options = {
-      method: 'GET',
-      url: 'https://api.spoonacular.com/recipes/complexSearch',
-      params: {
-        apiKey: "68028abd508948df9ad533955628fc4f",
-        diet: 'vegetarian',
-        excludeIngredients: 'coconut',
-        intolerances: 'egg, gluten',
-        number: '10',
-      },
+    var parser = new DomParser();
+    // var options = {
+    //   method: 'GET',
+    //   url: 'https://api.spoonacular.com/recipes/complexSearch',
+    //   params: {
+    //     apiKey: "68028abd508948df9ad533955628fc4f",
+    //     diet: 'vegetarian',
+    //     excludeIngredients: 'coconut',
+    //     intolerances: 'egg, gluten',
+    //     number: '10',
+    //   },
       
-    };
+    // };
     
-    axios.request(options).then(function (response) {
-      console.log(response.data);
-    }).catch(function (error) {
-      console.error(error);
-    });
+    // axios.request(options).then(function (response) {
+    //   console.log(response.data);
+    // }).catch(function (error) {
+    //   console.error(error);
+    // });
+
+    axios.get("https://spoonacular.com/Sun-dried-Tomato--amp--Artichoke-Tuna-Casserole-662287")
+      .then((res) => {
+        var dom = parser.parseFromString(res.data);
+
+        var ingr = dom.getElementsByClassName('spoonacular-ingredient');
+
+        ingr.forEach((i) => console.log(i.childNodes[3].childNodes[0].text))
+
+      });
 
   }
 
@@ -35,7 +46,7 @@ function InputPage() {
     <div class="d-inline-flex p-2" className="InputContainer" style={{ backgroundImage: "url(/leafBackground.jpeg)" }}>
       
     <form>
-      <h1> Budgeting App </h1>
+      <h1> $crunch </h1>
     <div className="form-group">
             <label>Budget Per Week</label>
             <input name="email" type="email" className="form-control" placeholder="$" ref={inputRef} />
